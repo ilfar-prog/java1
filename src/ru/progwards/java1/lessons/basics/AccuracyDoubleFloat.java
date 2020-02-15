@@ -19,7 +19,7 @@ public class AccuracyDoubleFloat {
         volume_ball_double = volumeBallDouble(radius);
         volume_ball_float = volumeBallFloat((float)radius);
         double Accuracy;
-        Accuracy = volume_ball_float - volume_ball_double;
+        Accuracy =  volume_ball_double - volume_ball_float;
         return Accuracy;
     }
 
@@ -40,11 +40,11 @@ public class AccuracyDoubleFloat {
         System.out.print(W_earth);
         System.out.println(" куб. км");
 
-        double float_minus_double;
-        float_minus_double = calculateAccuracy(6371.2);
+        double double_minus_float;
+        double_minus_float = calculateAccuracy(6371.2);
 
         System.out.print("Погрешность float равна ");
-        System.out.println(float_minus_double);
+        System.out.println(double_minus_float);
     }
 
 }
