@@ -66,7 +66,9 @@ return false;
 
 //        System.out.println(containsDigit(-12345,6 ));
 //        System.out.println(fiboNumber(2));
-        System.out.println(isGoldenTriangle(1, 2, 3));
+//        System.out.println(isGoldenTriangle(1, 2, 3));
+        int numberFibo = 15;
+        System.out.println("Первые " + numberFibo + " чисел Фибоначчи:");
         for(int i = 1; i <= 15; i++){
             System.out.println(fiboNumber(i));
 
@@ -84,7 +86,7 @@ return false;
                 while(c < 100){
                     c++;
                     if (isGoldenTriangle(a, b, c) == true){
-                        System.out.println("Стороный золотого треугольника: " + a + " " + b + " " + c);
+                        System.out.println("Стороны золотого треугольника: " + a + " " + b + " " + c);
                     }
 //                    System.out.println(isGoldenTriangle(a, b, c));
                 }
