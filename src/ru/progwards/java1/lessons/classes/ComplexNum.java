@@ -65,7 +65,7 @@ public class ComplexNum {
 //        b = (this.b * num.getReal() - this.a * num.getImag()) / (num.getReal() * num.getReal() + num.getImag() * num.getImag());
         int temp_a = a;
         int temp_b = b;
-        a = (temp_a * num.a + temp_b * num.b) / (num.a * num.a + num.a * num.b);
+        a = (temp_a * num.a + temp_b * num.b) / (num.a * num.a + num.b * num.b);
         b = (temp_b * num.a - temp_a * num.b) / (num.a * num.a + num.b * num.b);
         return this;
     }
