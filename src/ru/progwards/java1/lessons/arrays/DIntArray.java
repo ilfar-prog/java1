@@ -4,18 +4,24 @@ import java.util.Arrays;
 
 public class DIntArray {
 
-    private int[] a = new int[1];
+    private int[] a;
 
 
 
     public void add(int num) {
-        int c = a.length;
-        int[] b = new int[c + 1];
-        System. arraycopy(a, 0, b, 0, a.length);
+        if (a == null) {
+            a = new int[1];
+            a[0] = num;
+        }
+        else {
+            int[] b = new int[a.length + 1];
+
+            System.arraycopy(a, 0, b, 0, a.length);
 //        b = Arrays.copyOf(a, a.length + 1);
-        b[a.length ] = num;
+            b[a.length] = num;
 //        System. arraycopy(b, 0, a, 0, b.length);
-        a = Arrays.copyOf(b, b.length);
+            a = Arrays.copyOf(b, b.length);
+        }
 
     }
 
@@ -54,6 +60,7 @@ public class DIntArray {
         example.add(5);
         example.add(6);
         example.add(7);
+        System.out.println(example.printA());
         example.atInsert(4,3);
         System.out.println(example.printA());
         example.atDelete(4);
